@@ -2,11 +2,8 @@ package com.amica.billing;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Data
@@ -17,27 +14,36 @@ import java.util.Optional;
 
 public class Invoice {
 
-    @Getter
-    private int number;
-    private int nextNumber = 0;
+    private int number = 0;
+    private int nextNumber;
     private double amount;
-    private LocalDateTime invoiceDate;
-    private LocalDate paidDate;
+    private LocalDate invoiceDate;
+    private Optional<LocalDate> paidDate;
     private Customer customer;
 
-    public Invoice(int number, double amount, LocalDateTime invoiceDate) {
-        this.number = ++nextNumber;
+    public Invoice(int number, double amount, LocalDate invoiceDate) {
+        this.number = number;
+        this.nextNumber = ++number;  //this will go in Billing
         this.amount = amount;
         this.invoiceDate = invoiceDate;
     }
 
-//    public void setupInvoiceDate() {
-//        LocalDateTime invoiceDate = LocalDateTime.now();
-//        System.out.println("Current date and time " + invoiceDate);
+//    public Optional<LocalDate> getPaidDate() {
+//        return Optional.ofNullable(paidDate);
 //    }
 
-    public Optional<LocalDate> getPaidDate() {
-        return Optional.ofNullable(paidDate);
+    public void paidDate(Optional<LocalDate> paidDate){
+        if (paidDate.isPresent()){
+            this.paidDate = paidDate;
+            amount = 0;
+        }
+    }
+
+    public void assignInvoice(Customer customer){
+        if (customer != null) {
+            this.customer = customer;
+            customer.addInvoice(this);
+        }
     }
 
     public boolean isPaidInFull(){

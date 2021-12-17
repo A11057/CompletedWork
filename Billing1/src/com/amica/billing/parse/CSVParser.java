@@ -34,6 +34,7 @@ public class CSVParser implements Parser{
 
 	private Customer customer;
 	private Terms terms;
+	private Invoice invoice;
 
 	/**
 	 * Helper that can parse one line of comma-separated text in order to
@@ -66,11 +67,12 @@ public class CSVParser implements Parser{
 						terms = Terms.CREDIT_90;
 						break;
 					default:
-						return null;
+						terms = null;
 				}
 
 				//TODO create a customer object and return it
 				customer = new Customer(firstName, lastName, terms);
+
 			} catch (Exception ex) {
 				log.warning(() ->
 						"Couldn't parse terms value, skipping customer: "+ line);
@@ -103,9 +105,17 @@ public class CSVParser implements Parser{
 						: Optional.empty();
 
 				//TODO find the corresponding customer in the map
-
+				Customer customerFound = customers.get(first + " " + last);  //.get gets the corresponding key in customers
 
 				//TODO create an invoice and return it
+				invoice = new Invoice(number, amount, date);
+				if (paidDate != null) {
+					invoice.paidDate(paidDate);
+				}
+				if (customerFound != null) {
+					invoice.assignInvoice(customerFound);
+				}
+
 			} catch (Exception ex) {
 				ex.printStackTrace();
 				log.warning(() ->
@@ -115,8 +125,7 @@ public class CSVParser implements Parser{
 			log.warning(() ->
 					"Incorrect number of fields, skipping invoice: " + line);
 		}
-
-		return null;
+		return invoice;
 	}
 
 	/**
@@ -124,7 +133,7 @@ public class CSVParser implements Parser{
 	 */
 	public String formatCustomer(Customer customer) {
 		//TODO provide the values to be formatted
-		return String.format("%s,%s,%s", "NYI", "NYI", "NYI");
+		return String.format("%s,%s,%s", customer.getFirstName(), customer.getLastName(), customer.getTerms());
 	}
 
 	/**
@@ -133,7 +142,8 @@ public class CSVParser implements Parser{
 	public String formatInvoice(Invoice invoice) {
 		//TODO provide the values to be formatted
 		return String.format("%d,%s,%s,%.2f,%s%s",
-				0, "NYI", "NYI", 0.0, "NYI", "NYI");
+				invoice.getNumber(), invoice.getCustomer().getFirstName(), invoice.getCustomer().getLastName(), invoice.getAmount(),
+				invoice.getInvoiceDate(), invoice.getPaidDate().isPresent()?invoice.getPaidDate():"");
 	}
 
 	@Override
@@ -144,16 +154,16 @@ public class CSVParser implements Parser{
 
 	@Override
 	public Stream<Invoice> parseInvoices(Stream<String> invoiceLines, Map<String, Customer> customers) {
-		return null;
+		return invoiceLines.map(line -> parseInvoice(line, customers));
 	}
 
 	@Override
 	public Stream<String> produceCustomers(Stream<Customer> customers) {
-		return null;
+		return customers.map(line -> formatCustomer(line));
 	}
 
 	@Override
 	public Stream<String> produceInvoices(Stream<Invoice> invoices) {
-		return null;
+		return invoices.map(line -> formatInvoice(line));
 	}
 }

@@ -87,7 +87,7 @@ public class FlatParser implements Parser{
 						terms = Terms.CREDIT_90;
 						break;
 					default:
-						return null;
+						terms = null;
 				}
 				//TODO create a customer object and return it
 				customer = new Customer(firstName, lastName, terms);

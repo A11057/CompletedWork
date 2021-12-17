@@ -1,9 +1,18 @@
 package com.amica.billing.test;
 
+import com.amica.billing.Customer;
+import com.amica.billing.Invoice;
+import com.amica.billing.Terms;
+import com.amica.billing.parse.CSVParser;
+import com.amica.billing.parse.Parser;
+
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Stream;
 
 /**
  * Test program that asks a {@link Billing} to load CSV data and produce
@@ -33,7 +42,7 @@ public class TestCountrySingers {
 
 	public static void testParser() {
 		System.out.println("Testing the parser ...");
-		/*
+
 		Parser parser = new CSVParser();
 		Stream<String> customerData = Stream.of(
 				"Jerry,Reed,30",
@@ -52,8 +61,8 @@ public class TestCountrySingers {
 		customerMap.put(customer.getName(), customer);
 		Stream<Invoice> invoices = parser.parseInvoices(invoiceData, customerMap);
 		assertThat(invoices.anyMatch(inv -> inv.getNumber() == 106),
-				"There shuld be an invoice with the number 106.");
-		*/
+				"There should be an invoice with the number 106.");
+
 		System.out.println();
 	}
 	
