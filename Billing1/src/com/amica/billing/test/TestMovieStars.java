@@ -4,15 +4,6 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.stream.Stream;
-
-import com.amica.billing.Customer;
-import com.amica.billing.Invoice;
-import com.amica.billing.parse.FlatParser;
-import com.amica.billing.parse.Parser;
 
 /**
  * Test program that asks a {@link Billing} to load flat-format data and produce
@@ -22,10 +13,10 @@ import com.amica.billing.parse.Parser;
  */
 public class TestMovieStars {
 
-	public static final String CUSTOMERS_FILENAME = 
-			"data/movie_Stars/customers.flat";
-	public static final String INVOICES_FILENAME = 
-			"data/movie_Stars/invoices.flat";
+	public static final String CUSTOMERS_FILENAME =
+			"Billing1/data/movie_Stars/customers.flat";
+	public static final String INVOICES_FILENAME =
+			"Billing1/data/movie_Stars/invoices.flat";
 	public static final String OUTPUT_FOLDER = "reports/movie_Stars";
 	
 	public static void assertThat(boolean condition, String error) {
@@ -105,20 +96,20 @@ public class TestMovieStars {
 	
 	public static void main(String[] args) {
 		
-		File workspace = new File("data/movie_Stars");
+		File workspace = new File("Billing1/data/movie_Stars");
 		workspace.mkdir();
 		try {
 			// This sets up data files just for this test, fresh copy each time,
 			// and assures that the folders are in place to hold reports:
-			Files.copy(Paths.get("data/customers.flat"), Paths.get(CUSTOMERS_FILENAME),
+			Files.copy(Paths.get("Billing1/data/customers.flat"), Paths.get(CUSTOMERS_FILENAME),
 					StandardCopyOption.REPLACE_EXISTING);
-			Files.copy(Paths.get("data/invoices.flat"), Paths.get(INVOICES_FILENAME),
+			Files.copy(Paths.get("Billing1/data/invoices.flat"), Paths.get(INVOICES_FILENAME),
 					StandardCopyOption.REPLACE_EXISTING);
 			Files.createDirectories(Paths.get(OUTPUT_FOLDER));
 			
 			testParser();
-			testBilling();
-			testReporter();
+//			testBilling();
+//			testReporter();
 			
 		} catch (Exception ex) {
 			ex.printStackTrace();

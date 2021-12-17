@@ -17,7 +17,7 @@ public class Customer {
     public Customer(String firstName, String lastName, Terms terms) {
         this.firstName = firstName;
         this.lastName = lastName;
-        //this.terms = terms;
+        this.terms = terms;
     }
 
     public String getName() {
