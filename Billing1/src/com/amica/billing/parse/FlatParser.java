@@ -68,28 +68,7 @@ public class FlatParser implements Parser{
 				String termsString = line.substring
 						(CUSTOMER_TERMS_OFFSET, CUSTOMER_LENGTH).trim();
 
-				//TODO convert the terms string to an enum
-				//Terms.valueOf(termsString);
-				switch(termsString) {
-					case "CASH":
-						terms = Terms.CASH;
-						break;
-					case "30":
-						terms = Terms.CREDIT_30;
-						break;
-					case "45":
-						terms = Terms.CREDIT_45;
-						break;
-					case "60":
-						terms = Terms.CREDIT_60;
-						break;
-					case "90":
-						terms = Terms.CREDIT_90;
-						break;
-					default:
-						terms = null;
-				}
-				//TODO create a customer object and return it
+				Terms.valueOf(termsString);
 				customer = new Customer(firstName, lastName, terms);
 			} catch (Exception ex) {
 				log.warning(() ->
