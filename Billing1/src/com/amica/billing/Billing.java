@@ -15,6 +15,12 @@ public class Billing {
     private List<Invoice> invoices = new ArrayList<>();
     private Map<String, Customer> customers = new HashMap<>();
 
-    public Billing() {
+    public Billing(String customerFilename, String invoiceFilename) {
+        this.customerFilename = customerFilename;
+        this.invoiceFilename = invoiceFilename;
+    }
+
+    public static void determineParser(String customerFilename, String invoiceFilename) {
+        //store and pass the filenames
     }
 }
