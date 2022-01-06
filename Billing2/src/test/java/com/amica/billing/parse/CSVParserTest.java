@@ -1,5 +1,8 @@
 package com.amica.billing.parse;
 
+import org.junit.jupiter.api.Test;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 import static com.amica.billing.TestUtility.*;
 
 import java.util.List;
@@ -14,6 +17,8 @@ import java.util.stream.Stream;
  * @author Will Provost
  */
 public class CSVParserTest {
+
+	public static final Parser parser = new CSVParser();
 
 	public static final List<String> GOOD_CUSTOMER_DATA = Stream.of
 			("Customer,One,CASH",
@@ -40,5 +45,24 @@ public class CSVParserTest {
 			 "4,Customer,Four,400,2021-11-11",
 			 "5,Customer,Three,500,2022-01-04,20220108",
 			 "6,Customer,Three,600,2021-12-04").toList();
-	
+
+	@Test
+	public void testGoodDataSet() throws Exception{
+		assertThat(parser.parseCustomers(GOOD_CUSTOMER_DATA.stream()).toList(), sameAsList(GOOD_CUSTOMERS));
+	}
+
+	@Test
+	public void testBadDataSet() throws Exception{
+		assertThat(parser.parseCustomers(BAD_CUSTOMER_DATA.stream()).toList(), sameAsList(BAD_CUSTOMERS));
+	}
+
+	@Test
+	public void testGoodInvoiceData() throws Exception{
+		assertThat (parser.parseInvoices(GOOD_INVOICE_DATA.stream(), GOOD_CUSTOMERS_MAP).toList(), sameAsList(GOOD_INVOICES));
+	}
+
+	@Test
+	public void testBadInvoiceData() throws Exception{
+		assertThat (parser.parseInvoices(BAD_INVOICE_DATA.stream(), GOOD_CUSTOMERS_MAP).toList(), sameAsList(BAD_INVOICES));
+	}
 }

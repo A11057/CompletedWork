@@ -1,6 +1,8 @@
 package com.amica.billing.parse;
 
 import static com.amica.billing.TestUtility.*;
+import org.junit.jupiter.api.Test;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -16,6 +18,8 @@ import com.amica.billing.TestUtility;
  * @author Will Provost
  */
 public class FlatParserTest {
+
+	public static final Parser parser = new CSVParser();
 
 	public static final List<String> GOOD_CUSTOMER_DATA = Stream.of 
 			("Customer    One         CASH      ",
@@ -42,5 +46,14 @@ public class FlatParserTest {
 			 "   4Customer    Two            400.0993021      ",
 			 "   5Customer    Four             500010422010822",
 			 "   6Customer    Three            600120421      ").toList();
-	
+
+	@Test
+	public void testGoodDataSet() throws Exception{
+		assertThat(parser.parseCustomers(GOOD_CUSTOMER_DATA.stream()).toList(), sameAsList(GOOD_CUSTOMERS));
+	}
+
+	@Test
+	public void testBadDataSet() throws Exception{
+		assertThat(parser.parseCustomers(BAD_CUSTOMER_DATA.stream()).toList(), sameAsList(BAD_CUSTOMERS));
+	}
 }
