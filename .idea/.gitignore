@@ -1,3 +1,15 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+**/.idea/**
+**/*.iml
+**/*.class
+**/*.jpg
+**/*.pdf
+**/*.png
+**/*.drawio
+**/*.jar
+**/*.flat
+**/*.html
+**/*.txt
+**/*.csv
