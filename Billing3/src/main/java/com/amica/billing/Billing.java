@@ -22,6 +22,8 @@ import java.util.stream.Stream;
 
 import com.amica.billing.parse.Parser;
 
+import com.amica.esa.componentconfiguration.manager.ComponentConfigurationManager;
+import com.amica.escm.configuration.api.Configuration;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.extern.java.Log;
@@ -59,7 +61,19 @@ public class Billing {
 	private int nextInvoiceNumber;
 	private List<Consumer<Customer>> customerListeners = new ArrayList<>();
 	private List<Consumer<Invoice>> invoiceListeners = new ArrayList<>();
-	
+
+	public static final String CONFIGURATION_NAME = "Billing";
+	public static final String PROPERTY_NAME_CUSTOMERS = "Billing.customersFile";
+	public static final String PROPERTY_NAME_INVOICES = "Billing.invoicesFile";
+
+	public Billing(com.amica.escm.configuration.api.Configuration configuration){
+		this (configuration.getString(PROPERTY_NAME_CUSTOMERS), configuration.getString(PROPERTY_NAME_INVOICES));
+	}
+
+	public Billing(){
+		this (ComponentConfigurationManager.getInstance().getConfiguration(CONFIGURATION_NAME));
+	}
+
 	/**
 	 * Build a Billing object based on two filenames.
 	 * We store off the paths, {@link ParserFactory find a parser}, 
