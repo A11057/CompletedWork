@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 
+import com.amica.esa.componentconfiguration.manager.ComponentConfigurationManager;
 import lombok.Getter;
 import lombok.extern.java.Log;
 
@@ -34,7 +35,19 @@ public class Reporter {
 			"overdue_invoices.txt";
 	public static final String FILENAME_CUSTOMERS_AND_VOLUME = 
 			"customer_and_volume.txt";
-	
+
+	public static final String CONFIGURATION_NAME = "Billing";
+	public static final String OUTPUT_FOLDER = "outputFolder";
+	public static final String AS_OF_DATE = "asOfDate";
+
+	public Reporter(com.amica.escm.configuration.api.Configuration configuration){
+		//we're setting us Billing to use it and we're using the LocalDate as of date
+		this (new Billing(configuration),configuration.getString(OUTPUT_FOLDER), LocalDate.parse(configuration.getString(AS_OF_DATE)));
+	}
+
+	public Reporter(){
+		this (ComponentConfigurationManager.getInstance().getConfiguration(CONFIGURATION_NAME));
+	}
 	/**
 	 * Factory for a date formatter that we use consistently in a few reports. 
 	 */
