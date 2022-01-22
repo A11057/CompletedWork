@@ -11,8 +11,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.stream.Stream;
 
-import static com.amica.billing.BillingTest.SOURCE_FOLDER;
-import static com.amica.billing.TestUtility.*;
+import static com.amica.billing.TestUtility.TEMP_FOLDER;
 
 public class ReporterConfiguredIntegrationTest extends ReporterIntegrationTest{
 
@@ -38,7 +37,7 @@ public class ReporterConfiguredIntegrationTest extends ReporterIntegrationTest{
     @Override
     public void setUp() throws IOException {
         Files.createDirectories(Paths.get(TEMP_FOLDER));
-        Files.createDirectories(Paths.get(OUTPUT_FOLDER));
+        Files.createDirectories(Paths.get(getOutputFolder()));
         Files.copy(Paths.get(SOURCE_FOLDER, CUSTOMERS_FILENAME),
                 Paths.get(TEMP_FOLDER, CUSTOMERS_FILENAME),
                 StandardCopyOption.REPLACE_EXISTING);
@@ -53,7 +52,7 @@ public class ReporterConfiguredIntegrationTest extends ReporterIntegrationTest{
                         Reporter.FILENAME_CUSTOMERS_AND_VOLUME)
                 .forEach(f -> new File(getOutputFolder(), f).delete());
 
-        Reporter reporter = new Reporter();
+        reporter = new Reporter();
         billing = reporter.getBilling();
     }
 }

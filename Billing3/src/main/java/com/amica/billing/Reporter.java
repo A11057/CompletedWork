@@ -41,7 +41,7 @@ public class Reporter {
 	public static final String AS_OF_DATE = "asOfDate";
 
 	public Reporter(com.amica.escm.configuration.api.Configuration configuration){
-		//we're setting us Billing to use it and we're using the LocalDate as of date
+		//we're setting up Billing to use it and we're using the LocalDate as of date
 		this (new Billing(configuration),configuration.getString(OUTPUT_FOLDER), LocalDate.parse(configuration.getString(AS_OF_DATE)));
 	}
 
