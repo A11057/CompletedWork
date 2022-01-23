@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="903a7acc-9249-40c8-8837-87adc3c6fe29" name="Changes" comment="pushing env and txt files to git since it was missed previously" />
+    <list default="true" id="903a7acc-9249-40c8-8837-87adc3c6fe29" name="Changes" comment="comitting xml workspace" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642974125094</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="comitting xml workspace">
+      <created>1642975344116</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1642975344116</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,6 +218,7 @@
     <MESSAGE value="Adding all of ParserFactory and Reporter code.  The final test is still not working,step 42. but will continue to work on it" />
     <MESSAGE value="Got final test to pass.  Upated the file path names for quoted in the billing.properties and in ReporterIngegrationTest, I was instantiating a new Reporter object instead of just setting reporter to new Reporter." />
     <MESSAGE value="pushing env and txt files to git since it was missed previously" />
-    <option name="LAST_COMMIT_MESSAGE" value="pushing env and txt files to git since it was missed previously" />
+    <MESSAGE value="comitting xml workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="comitting xml workspace" />
   </component>
 </project>
