@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="903a7acc-9249-40c8-8837-87adc3c6fe29" name="Changes" comment="pushing env and txt files to git since it was missed previously">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/Billing$CustomerAndVolume.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/Billing.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/Customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/Invoice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/ParserFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/Reporter$1NonCloser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/Reporter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/Terms.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/parse/CSVParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/parse/FlatParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/parse/Parser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/parse/QuotedCSVParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/test/ConfigMgrDiagnostics$FileNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/test/ConfigMgrDiagnostics$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/test/ConfigMgrDiagnostics.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/test/ConfigurationDiagnostics$Item.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/test/ConfigurationDiagnostics$Report.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/test/ConfigurationDiagnostics$Summary.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/test/ConfigurationDiagnostics.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/BillingConfiguredTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/BillingIntegrationTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/BillingPropertyTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/BillingTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/ParserFactoryConfiguredTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/ParserFactoryTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/ReporterConfiguredIntegrationTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/ReporterIntegrationTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/ReporterTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/TestUtility.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/parse/CSVParserTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/parse/FlatParserTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/parse/QuotedCSVParserTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../Tools/Maven3.3.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="23soa2pzAmJQcDGXtG8YB6aSqQe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../JavaTest/JavaTraining/JavaTraining/AJF/Config_Step4" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager" selected="JUnit.ReporterConfiguredIntegrationTest">
+    <configuration name="BillingConfiguredTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Billing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.amica.billing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.amica.billing" />
+      <option name="MAIN_CLASS_NAME" value="com.amica.billing.BillingConfiguredTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BillingIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Billing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.amica.billing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.amica.billing" />
+      <option name="MAIN_CLASS_NAME" value="com.amica.billing.BillingIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BillingPropertyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Billing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.amica.billing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.amica.billing" />
+      <option name="MAIN_CLASS_NAME" value="com.amica.billing.BillingPropertyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParserFactoryConfiguredTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Billing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.amica.billing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.amica.billing" />
+      <option name="MAIN_CLASS_NAME" value="com.amica.billing.ParserFactoryConfiguredTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReporterConfiguredIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Billing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.amica.billing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.amica.billing" />
+      <option name="MAIN_CLASS_NAME" value="com.amica.billing.ReporterConfiguredIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ReporterConfiguredIntegrationTest" />
+        <item itemvalue="JUnit.ParserFactoryConfiguredTest" />
+        <item itemvalue="JUnit.BillingConfiguredTest" />
+        <item itemvalue="JUnit.BillingPropertyTest" />
+        <item itemvalue="JUnit.BillingIntegrationTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="903a7acc-9249-40c8-8837-87adc3c6fe29" name="Changes" comment="" />
+      <created>1642532217954</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642532217954</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Adding files and updates for Billing section of Billing3 requirements">
+      <created>1642730407071</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642730407071</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Updating file names in billing.properties file that were failing test">
+      <created>1642802655066</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642802655066</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Adding all of ParserFactory and Reporter code.  The final test is still not working,step 42. but will continue to work on it">
+      <created>1642809872283</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642809872283</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Got final test to pass.  Upated the file path names for quoted in the billing.properties and in ReporterIngegrationTest, I was instantiating a new Reporter object instead of just setting reporter to new Reporter.">
+      <created>1642873152559</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642873152559</updated>
+    </task>
+    <task id="LOCAL-00005" summary="pushing env and txt files to git since it was missed previously">
+      <created>1642974125094</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642974125094</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding files and updates for Billing section of Billing3 requirements" />
+    <MESSAGE value="Updating file names in billing.properties file that were failing test" />
+    <MESSAGE value="Adding all of ParserFactory and Reporter code.  The final test is still not working,step 42. but will continue to work on it" />
+    <MESSAGE value="Got final test to pass.  Upated the file path names for quoted in the billing.properties and in ReporterIngegrationTest, I was instantiating a new Reporter object instead of just setting reporter to new Reporter." />
+    <MESSAGE value="pushing env and txt files to git since it was missed previously" />
+    <option name="LAST_COMMIT_MESSAGE" value="pushing env and txt files to git since it was missed previously" />
+  </component>
+</project>
