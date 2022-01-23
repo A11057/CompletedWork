@@ -4,47 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="903a7acc-9249-40c8-8837-87adc3c6fe29" name="Changes" comment="pushing env and txt files to git since it was missed previously">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/Billing$CustomerAndVolume.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/Billing.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/Invoice.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/ParserFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/Reporter$1NonCloser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/Reporter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/Terms.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/parse/CSVParser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/parse/FlatParser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/parse/Parser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/billing/parse/QuotedCSVParser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/test/ConfigMgrDiagnostics$FileNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/test/ConfigMgrDiagnostics$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/test/ConfigMgrDiagnostics.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/test/ConfigurationDiagnostics$Item.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/test/ConfigurationDiagnostics$Report.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/test/ConfigurationDiagnostics$Summary.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/amica/test/ConfigurationDiagnostics.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/BillingConfiguredTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/BillingIntegrationTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/BillingPropertyTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/BillingTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/ParserFactoryConfiguredTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/ParserFactoryTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/ReporterConfiguredIntegrationTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/ReporterIntegrationTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/ReporterTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/TestUtility.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/parse/CSVParserTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/parse/FlatParserTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/amica/billing/parse/QuotedCSVParserTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="903a7acc-9249-40c8-8837-87adc3c6fe29" name="Changes" comment="pushing env and txt files to git since it was missed previously" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
