@@ -8,17 +8,21 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-/**
- * Simple JavaBean representing an invoice.
- *
- * @author Will Provost
- */
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
 @Data
 @EqualsAndHashCode(of="number")
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+
 public class Invoice {
+
+    @Id
 	private int number;
+    @ManyToOne
     private Customer customer;
     private double amount;
     private LocalDate issueDate;

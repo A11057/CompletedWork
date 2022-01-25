@@ -15,7 +15,6 @@ import java.util.stream.Stream;
 
 import com.amica.billing.parse.ParserPersistence;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**

@@ -25,7 +25,6 @@ public abstract class CachingPersistence implements Persistence{
     protected abstract void writeInvoice(Invoice invoice);
 
     public void load() {
-
         try (Stream<Customer> readCustomers = readCustomers()) {
             customers = readCustomers.collect(Collectors.toMap(Customer::getName, identity()));
             try (Stream<Invoice> readInvoices = readInvoices()) {
