@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="903a7acc-9249-40c8-8837-87adc3c6fe29" name="Changes" comment="pushing workspace xml">
+      <change afterPath="$PROJECT_DIR$/../Billing4/src/main/java/com/amica/billing/db/CachingPersistence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Billing4/src/main/java/com/amica/billing/parse/ParserPersistence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Billing4/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Billing4/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Billing4/src/test/java/com/amica/billing/BillingIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Billing4/src/test/java/com/amica/billing/BillingIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +50,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../JavaTest/JavaTraining/JavaTraining/AJF/Config_Step4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../JavaTest/JavaTraining/JavaTraining/Projects/Billing/Billing3" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -220,6 +224,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding files and updates for Billing section of Billing3 requirements" />

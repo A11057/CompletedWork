@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
 
+import com.amica.billing.parse.ParserPersistence;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ import org.junit.jupiter.api.Test;
  * 
  * @author Will Provost
  */
-@Disabled // until a Persistence implementation is available
+
 public class BillingIntegrationTest {
 
 	public static final String SOURCE_FOLDER = "data";
@@ -62,11 +63,12 @@ public class BillingIntegrationTest {
 	 * Factory for a stock billing object.
 	 */
 	public static Billing createBilling() {
-		/*
-		return new Billing(TEMP_FOLDER + "/" + CUSTOMERS_FILENAME,
-				TEMP_FOLDER + "/" + INVOICES_FILENAME);
-		*/
-		return null;
+		ParserPersistence parserPersistence = new ParserPersistence();
+		parserPersistence.setCustomersFile(TEMP_FOLDER + "/" + CUSTOMERS_FILENAME);
+		parserPersistence.setInvoicesFile(TEMP_FOLDER + "/" + INVOICES_FILENAME);
+		parserPersistence.load();
+
+		return new Billing(parserPersistence);
 	}
 	
 	/**
