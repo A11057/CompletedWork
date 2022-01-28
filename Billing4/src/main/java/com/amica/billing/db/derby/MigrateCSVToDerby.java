@@ -1,6 +1,7 @@
 package com.amica.billing.db.derby;
 
 import com.amica.billing.Customer;
+import com.amica.billing.Terms;
 import com.amica.billing.db.CustomerRepository;
 import com.amica.billing.db.InvoiceRepository;
 import org.springframework.boot.SpringApplication;
@@ -25,9 +26,23 @@ public class MigrateCSVToDerby {
         try (ConfigurableApplicationContext applicationContext =
                      SpringApplication.run(MigrateCSVToDerby.class)) {
             CustomerRepository customerRepository = applicationContext.getBean(CustomerRepository.class);
-            //InvoiceRepository invoiceRepository = applicationContext.getBean(InvoiceRepository.class);
+            InvoiceRepository invoiceRepository = applicationContext.getBean(InvoiceRepository.class);
+
+            customerRepository.deleteAll();
+            System.out.println(customerRepository.count());
+            Customer customer = new Customer("Sherry", "Custodio", Terms.CREDIT_30);
+            Customer customer1 = new Customer("McKayla", "West", Terms.CREDIT_90);
+            customerRepository.save(customer);
+            customerRepository.save(customer1);
+            System.out.println(customerRepository.count());
+
+            System.out.println(customerRepository.findByFirstNameAndLastName("McKayla","West"));
+            customerRepository.deleteAll();
+
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+
     }
 }
