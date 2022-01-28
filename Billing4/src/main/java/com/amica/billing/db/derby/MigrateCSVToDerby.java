@@ -13,6 +13,8 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import javax.persistence.criteria.CriteriaBuilder;
+
 @Configuration
 @EnableAutoConfiguration
 @EnableJpaRepositories(basePackageClasses= CustomerRepository.class)
@@ -29,15 +31,17 @@ public class MigrateCSVToDerby {
             InvoiceRepository invoiceRepository = applicationContext.getBean(InvoiceRepository.class);
 
             customerRepository.deleteAll();
-            System.out.println(customerRepository.count());
+            System.out.println("Starting count for Customer Repository: " + customerRepository.count());
             Customer customer = new Customer("Sherry", "Custodio", Terms.CREDIT_30);
             Customer customer1 = new Customer("McKayla", "West", Terms.CREDIT_90);
             customerRepository.save(customer);
             customerRepository.save(customer1);
-            System.out.println(customerRepository.count());
-
-            System.out.println(customerRepository.findByFirstNameAndLastName("McKayla","West"));
+            System.out.println("Ending count for Customer Repository: " + customerRepository.count());
+            System.out.println("For " + customerRepository.findByFirstNameAndLastName("McKayla","West"));
             customerRepository.deleteAll();
+
+            invoiceRepository.deleteAll();
+            System.out.println(invoiceRepository.count());
 
 
         } catch (Exception ex) {
