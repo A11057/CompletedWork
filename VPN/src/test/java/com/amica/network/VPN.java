@@ -13,11 +13,11 @@ public class VPN {
 
     public static void main(String[] args) {
 
-        System.setProperty("management.endpoints.web.exposure.include", "*");
-        System.setProperty("management.endpoint.shutdown.enabled", "true");
-        System.setProperty("endpoints.shutdown.enabled", "true");
+//        System.setProperty("management.endpoints.web.exposure.include", "*");
+//        System.setProperty("management.endpoint.shutdown.enabled", "true");
+//        System.setProperty("endpoints.shutdown.enabled", "true");
 
-        System.setProperty("logging.level.com.amica.network.Monitor", "INFO");
+//        System.setProperty("logging.level.com.amica.network.Monitor", "INFO");
 
         System.setProperty("env.name", "developerworkstation");
 
