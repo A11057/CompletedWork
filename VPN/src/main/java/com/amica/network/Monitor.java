@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Locale;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -21,7 +20,7 @@ public class Monitor {
 
     //Spring book page 45 and Billing8
     //https://codingnconcepts.com/spring-boot/spring-value-annotation/  ex #4
-    @Value("${Monitor.statusfile:status.txt")
+    @Value("${Monitor.statusfile}")
     private String statusfile;
 
     @Scheduled(fixedRate = 5000)
