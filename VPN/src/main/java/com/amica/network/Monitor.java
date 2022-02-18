@@ -18,18 +18,24 @@ import java.util.stream.Stream;
 @Setter
 public class Monitor {
 
+    private VPN.Status latestStatus;
+
     //Spring book page 45 and Billing8
     //https://codingnconcepts.com/spring-boot/spring-value-annotation/  ex #4
     @Value("${Monitor.statusfile}")
-    private String statusfile;
+    private String filename;
 
     @Scheduled(fixedRate = 5000)
     public void schedule() throws IOException {
-        try (Stream<String> statusLines = Files.lines(Paths.get(statusfile));) {
+        try (Stream<String> statusLines = Files.lines(Paths.get(filename));) {
             String statusString = statusLines.collect(Collectors.joining("\n")).trim();
             try {
                 VPN.Status status = VPN.Status.valueOf(statusString.toUpperCase());
                 log.info("Status is: " + statusString);
+                if (latestStatus != status) {
+                    latestStatus = status;
+                    log.log(Level.INFO, "Status has changed to " + latestStatus);
+                }
             } catch(Exception ex){
                 log.log(Level.WARNING, "File contents are not a recognized value ", statusString);
                 }

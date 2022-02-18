@@ -15,8 +15,6 @@ public class VPN {
 
         System.setProperty("env.name", "developerworkstation");
 
-       // System.setProperty("component.name", "MQ");
-
         SpringApplication.run(VPN.class, args);
     }
 }
